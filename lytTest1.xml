@@ -13,8 +13,8 @@
           <block type="logic_compare" id="169" inline="true">
             <field name="OP">LT</field>
             <value name="A">
-              <block type="sensor_light" id="205">
-                <field name="LIGHT">LEFT</field>
+              <block type="sensor_object" id="303">
+                <field name="OBJECT">LEFTFRONT</field>
               </block>
             </value>
             <value name="B">
@@ -25,14 +25,19 @@
           </block>
         </value>
         <statement name="DO0">
-          <block type="movement_right" id="250">
+          <block type="oled_drawtext" id="305">
+            <field name="TEXT">leftFront=</field>
             <next>
-              <block type="robot_delay" id="227" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="228">
-                    <field name="NUM">200</field>
+              <block type="movement_right" id="250">
+                <next>
+                  <block type="robot_delay" id="227" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="228">
+                        <field name="NUM">200</field>
+                      </block>
+                    </value>
                   </block>
-                </value>
+                </next>
               </block>
             </next>
           </block>
@@ -56,12 +61,12 @@
                 </value>
                 <next>
                   <block type="oled_drawtext" id="57">
-                    <field name="TEXT">left=</field>
+                    <field name="TEXT">leftFront=</field>
                     <next>
                       <block type="oled_drawnumber" id="66" inline="true">
                         <value name="NUMBER">
-                          <block type="sensor_light" id="108">
-                            <field name="LIGHT">LEFT</field>
+                          <block type="sensor_object" id="304">
+                            <field name="OBJECT">LEFTFRONT</field>
                           </block>
                         </value>
                         <next>
