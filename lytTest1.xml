@@ -31,44 +31,12 @@
           <block type="movement_forward" id="264"></block>
         </statement>
         <next>
-          <block type="oled_cleardisplay" id="33">
-            <next>
-              <block type="oled_setcursor" id="48" inline="true">
-                <value name="STARTX">
-                  <block type="math_number" id="124">
-                    <field name="NUM">10</field>
-                  </block>
-                </value>
-                <value name="STARTY">
-                  <block type="math_number" id="125">
-                    <field name="NUM">10</field>
-                  </block>
-                </value>
-                <next>
-                  <block type="oled_drawtext" id="57">
-                    <field name="TEXT">leftFront=</field>
-                    <next>
-                      <block type="oled_drawnumber" id="66" inline="true">
-                        <value name="NUMBER">
-                          <block type="sensor_object" id="304">
-                            <field name="OBJECT">LEFTFRONT</field>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="robot_delay" id="77" inline="true">
-                            <value name="DELAY">
-                              <block type="math_number" id="126">
-                                <field name="NUM">200</field>
-                              </block>
-                            </value>
-                          </block>
-                        </next>
-                      </block>
-                    </next>
-                  </block>
-                </next>
+          <block type="robot_delay" id="77" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="126">
+                <field name="NUM">200</field>
               </block>
-            </next>
+            </value>
           </block>
         </next>
       </block>
